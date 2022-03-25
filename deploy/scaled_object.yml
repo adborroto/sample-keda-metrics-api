@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: http-scaledobject
+  namespace: default
+  labels:
+    deploymentName: http-scaled
+spec:
+  maxReplicaCount: 5
+  scaleTargetRef:
+    name: testapp-deployment
+  triggers:
+    - type: metrics-api
+      metadata:
+        targetValue: "2"
+        url: "http://20.223.21.37/api/value"
+        valueLocation: 'payload.value'

@@ -4,9 +4,10 @@ FROM golang:1.17
 WORKDIR /app
 COPY go.mod .
 COPY server.go server.go
+COPY auth.go auth.go
 
 RUN go mod tidy
-RUN go build -o server server.go
+RUN go build -o server .
 
 EXPOSE 8090
 
