@@ -6,7 +6,7 @@ metadata:
   labels:
     deploymentName: http-scaled
 spec:
-  maxReplicaCount: 5
+  maxReplicaCount: 3
   scaleTargetRef:
     name: testapp-deployment
   triggers:

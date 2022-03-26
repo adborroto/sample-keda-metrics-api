@@ -19,7 +19,7 @@ spec:
         image: adoborroto/sample-keda-metrics-api:latest
         ports:
         - containerPort: 8090
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
 ---        
 apiVersion: apps/v1
 kind: Deployment
