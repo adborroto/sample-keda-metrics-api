@@ -13,5 +13,5 @@ spec:
     - type: metrics-api
       metadata:
         targetValue: "2"
-        url: "http://20.223.21.37/api/value"
+        url: "http://20.223.75.173/api/value"
         valueLocation: 'payload.value'
